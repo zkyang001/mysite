@@ -1,0 +1,9 @@
+<html>
+<head>
+</head>
+<body>
+	{% for article in objs %}
+		<a href='{% url 'detail' article.pk %}'>{{ article.title }}</a>
+	{% endfor %}
+</body>
+</html>
