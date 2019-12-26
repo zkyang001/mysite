@@ -9,7 +9,8 @@ def article_detail(request, article_id):
 	return render_to_response('article_web.html', param)
 
 def article_list(request):
-	blogs = Article.objects.all()
+	#blogs = Article.objects.all()
+	blogs = Article.objects.filter(is_delete=False)
 	param = {}
 	param['objs'] = blogs
 	return render_to_response('article_list.html', param)
